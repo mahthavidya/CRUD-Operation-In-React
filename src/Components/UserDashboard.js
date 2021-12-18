@@ -13,10 +13,6 @@ const Userlogin = () => {
   const uToken = useSelector((state) => state.loginStatusReducer);
 
   useEffect(() => {
-    console.log("token Userdashoard", uToken);
-  });
-
-  useEffect(() => {
     userData();
   }, []);
 
