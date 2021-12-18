@@ -20,13 +20,13 @@ const App = () => {
       // <MyComp />
       // </Suspense> */}
         <Routes>
+          {selector.token &&
+            ProtectedRoutes.map((el) => {
+              return <Route exact {...el} />;
+            })}
           {unProtectedRoutes.map((el) => {
             return <Route {...el} />;
           })}
-          {selector.token &&
-            ProtectedRoutes.map((el) => {
-              return <Route {...el} />;
-            })}
         </Routes>
       </>
     );
